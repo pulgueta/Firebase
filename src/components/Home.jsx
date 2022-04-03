@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+
+import { db } from "../../firebase.config";
 
 const Home = () => {
-  return (
-    <div className='home-wrapper'><h1>Home</h1></div>
-  )
-}
+  const [value, setValue] = useState([]);
+  const postCollection = collection(db, "posts");
 
-export default Home
+  useEffect(() => {
+    const getUser = async () => {
+      const data = await getDocs(postCollection);
+    };
+  }, []);
+
+  return (
+    <div className="home-wrapper">
+      <h1>Home</h1>
+    </div>
+  );
+};
+
+export default Home;
