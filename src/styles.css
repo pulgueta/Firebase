@@ -1,5 +1,68 @@
 @import url('./styles.globals.css');
 
-body {
+nav {
+    width: 100%;
+    height: 8rem;
+    background-color: var(--clr-secondary);
+    padding: 1rem 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .nav-title {
+    color: var(--clr-white);
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+nav .nav-els ul {
+    display: inline-block;
+    list-style: none;
+}
+
+nav .nav-els .nav-item {
+    display: inline-block;
+    margin-right: 10rem;
+}
+
+nav .nav-els .nav-item:last-of-type {
+    margin: 0;
+}
+
+nav .nav-els .nav-link {
+    color: var(--clr-white);
+    font-size: 1.6rem;
+    font-weight: 400;
+    position: relative;
+}
+
+nav .nav-els .nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: var(--clr-white);
+    height: 0.16rem;
+    border-radius: 1rem;
+    width: 0;
+    left: 0;
+    bottom: -0.35rem;
+    transition: all 300ms ease;
+}
+
+nav .nav-els .nav-link:hover::after {
+    width: 100%;
+}
+
+nav .nav-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.home-wrapper {
     background-color: var(--clr-black);
+    min-height: calc(100vh - 8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
