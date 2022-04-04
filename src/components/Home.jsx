@@ -13,12 +13,16 @@ const Home = () => {
     };
   }, []);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+  }
+
   return (
     <div className="home-wrapper">
       <form>
         <input type="text" placeholder="Email" />
         <input type="password" placeholder="Password" />
-        <button type="submit">Submit</button>
+        <button type="submit" onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );

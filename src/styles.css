@@ -13,7 +13,7 @@ nav {
 nav .nav-title {
     color: var(--clr-white);
     font-size: 2.6rem;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 nav .nav-els ul {
@@ -35,13 +35,6 @@ nav .nav-els .nav-link {
     font-size: 1.6rem;
     font-weight: 500;
     position: relative;
-}
-
-nav .nav-els .logout {
-    background-color: var(--clr-white);
-    color: var(--clr-secondary);
-    padding: .64rem 1.2rem;
-    border-radius: .8rem;
 }
 
 nav .nav-els .nav-link::after {
@@ -67,12 +60,21 @@ nav .nav-els .nav-icon {
 
 @media only screen and (max-width:54.375em) { 
 	nav {
-        padding: 1rem 0;
+        padding: 1rem;
     }
 }
 
-@media only screen and (max-width: 35.625em) { 
-	
+@media only screen and (max-width:33.75em) {
+    nav .nav-els .nav-link {
+        display: none;
+    }
+    
+    nav .nav-els .nav-icon {
+        display: block;
+        transform: translate(10rem, -.7rem);
+        color: var(--clr-white);
+        font-weight: bold;
+    }
 }
 
 .home-wrapper {
@@ -92,7 +94,7 @@ nav .nav-els .nav-icon {
     width: 30rem;
     height: 25rem;
     padding: 2rem 3rem;
-    background-color: var(--clr-primary);
+    background-color: var(--clr-white);
     border-radius: 2rem;
 }
 
@@ -104,9 +106,9 @@ nav .nav-els .nav-icon {
     margin-bottom: 3rem;
     padding: 1rem;
     font-size: 1.6rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 500;
-    box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .1);
+    box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .3);
 }
 
 .home-wrapper form input:focus {
@@ -114,20 +116,20 @@ nav .nav-els .nav-icon {
 }
 
 .home-wrapper form button {
-    width: 50%;
+    width: 100%;
     height: 4rem;
     border: none;
-    border-radius: .6rem;
-    background-color: var(--clr-secondary);
+    border-radius: 1rem;
+    background-color: var(--clr-primary);
     color: var(--clr-white);
     font-size: 1.6rem;
     font-weight: 500;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Manrope', sans-serif;
     cursor: pointer;
-    transition: all 300ms ease;
+    transition: 300ms ease;
 }
 
 .home-wrapper form button:hover {
-    width: 100%;
-    border-radius: 1.2rem;
+    border-radius: 2rem;
+    background-color: var(--clr-secondary);
 }

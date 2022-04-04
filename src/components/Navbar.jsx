@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 
-import '../styles.css'
+import "../styles.css";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -36,11 +36,15 @@ const Navbar = () => {
               Posts
             </Link>
           </li>
-
-          <div className="nav-icon" onClick={handleClick}>
-            {click ? <IoCloseOutline /> : <IoMenuOutline />}
-          </div>
         </ul>
+
+        <div className="nav-icon" onClick={handleClick}>
+          {click ? (
+            <IoCloseOutline fontSize={"large"} />
+          ) : (
+            <IoMenuOutline fontSize={"large"} />
+          )}
+        </div>
       </div>
     </nav>
   );
