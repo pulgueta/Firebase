@@ -12,14 +12,20 @@ const Navbar = () => {
       <div className="nav-els">
         <ul className="nav-element">
           <li className="nav-item">
-            <Link to={"/sign-in"} className="nav-link">
-              Log In
+            <Link to={"/"} className="nav-link">
+              Home
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to={"/posts"} className="nav-link">
               Posts
+            </Link>
+          </li>
+
+          <li className="nav-item">
+            <Link to={"/"} className="nav-link logout">
+              Log Out
             </Link>
           </li>
         </ul>
