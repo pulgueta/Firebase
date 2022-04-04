@@ -1,29 +1,32 @@
-import React, { useState, useEffect } from "react";
-import { collection, getDocs } from "firebase/firestore";
-
-import { db } from "../../firebase.config";
+import React from "react";
+import { IoLogoReact, IoLogoFirebase } from "react-icons/io5";
 
 const Home = () => {
-  const [value, setValue] = useState([]);
-  const postCollection = collection(db, "posts");
-
-  useEffect(() => {
-    const getUser = async () => {
-      const data = await getDocs(postCollection);
-    };
-  }, []);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-  }
-
   return (
-    <div className="home-wrapper">
-      <form>
-        <input type="text" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button type="submit" onClick={handleSubmit}>Submit</button>
-      </form>
+    <div className="wrapper home">
+      <div className="welcome">
+        <div className="title">
+          <h1>
+            CRUD WebApp with <br /> React <IoLogoReact /> and Firebase{" "}
+            <IoLogoFirebase />
+          </h1>
+          <hr />
+        </div>
+        <div className="content">
+          <h2>Educational purposes only</h2>
+          <p>
+            This is a simple CRUD application with React and Firebase. It was
+            created with the purpose of learning how <IoLogoReact /> and{" "}
+            <IoLogoFirebase /> work together and later on, use it on a real
+            project (ecommerce).
+          </p>
+          <br />
+          <p>
+            Inspired and based on various youtubers and tutorials, such as
+            FaztCode and PedroTech. There are many other things that I will implement, such as Authentication.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
