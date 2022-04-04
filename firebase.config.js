@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY ?? "",
+  apiKey: "AIzaSyC_DmIoXYY2sS1J_fbvbZOYX0kukCW7QYk",
   authDomain: "pulgueta-crud.firebaseapp.com",
   projectId: "pulgueta-crud",
   storageBucket: "pulgueta-crud.appspot.com",
   messagingSenderId: "237627427676",
-  appId: process.env.FIREBASE_APP_ID ?? "",
+  appId: "1:237627427676:web:9829a062d0c5c784b7cf99",
 };
 
 const app = initializeApp(firebaseConfig);
