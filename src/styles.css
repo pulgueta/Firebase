@@ -3,7 +3,7 @@
 nav {
     width: 100%;
     height: 8rem;
-    background-color: var(--clr-secondary);
+    background-color: var(--clr-primary);
     padding: 1rem 10rem;
     display: flex;
     justify-content: space-around;
@@ -13,7 +13,7 @@ nav {
 nav .nav-title {
     color: var(--clr-white);
     font-size: 2.6rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 nav .nav-els ul {
@@ -40,20 +40,39 @@ nav .nav-els .nav-link {
 nav .nav-els .logout {
     background-color: var(--clr-white);
     color: var(--clr-secondary);
-    padding: .5rem 1rem;
+    padding: .64rem 1.2rem;
+    border-radius: .8rem;
+}
+
+nav .nav-els .nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: var(--clr-white);
+    height: 0.16rem;
     border-radius: 1rem;
+    width: 0;
+    left: 0;
+    bottom: -0.35rem;
     transition: all 300ms ease;
 }
 
-nav .nav-els .logout:hover {
-    background-color: var(--clr-secondary);
-    color: var(--clr-white);
+nav .nav-els .nav-link:hover::after {
+    width: 100%;
 }
 
-
-nav .nav-icon {
+nav .nav-els .nav-icon {
     cursor: pointer;
     display: none;
+}
+
+@media only screen and (max-width:54.375em) { 
+	nav {
+        padding: 1rem 0;
+    }
+}
+
+@media only screen and (max-width: 35.625em) { 
+	
 }
 
 .home-wrapper {
@@ -63,4 +82,52 @@ nav .nav-icon {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.home-wrapper form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 25rem;
+    padding: 2rem 3rem;
+    background-color: var(--clr-primary);
+    border-radius: 2rem;
+}
+
+.home-wrapper form input {
+    width: 100%;
+    height: 4rem;
+    border: none;
+    border-radius: .8rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .1);
+}
+
+.home-wrapper form input:focus {
+    outline-color: var(--clr-primary);
+}
+
+.home-wrapper form button {
+    width: 50%;
+    height: 4rem;
+    border: none;
+    border-radius: .6rem;
+    background-color: var(--clr-secondary);
+    color: var(--clr-white);
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.home-wrapper form button:hover {
+    width: 100%;
+    border-radius: 1.2rem;
 }

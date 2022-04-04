@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 
+import '../styles.css'
+
 const Navbar = () => {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => {
+    setClick(!click);
+  };
+
   return (
     <nav>
       <Link to={"/"} className="nav-title">
@@ -12,8 +20,8 @@ const Navbar = () => {
       <div className="nav-els">
         <ul className="nav-element">
           <li className="nav-item">
-            <Link to={"/"} className="nav-link">
-              Home
+            <Link to={"/sign-in"} className="nav-link">
+              Log In
             </Link>
           </li>
 
@@ -24,10 +32,14 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item">
-            <Link to={"/"} className="nav-link logout">
-              Log Out
+            <Link to={"/posts"} className="nav-link">
+              Posts
             </Link>
           </li>
+
+          <div className="nav-icon" onClick={handleClick}>
+            {click ? <IoCloseOutline /> : <IoMenuOutline />}
+          </div>
         </ul>
       </div>
     </nav>

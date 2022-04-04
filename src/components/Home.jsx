@@ -15,7 +15,11 @@ const Home = () => {
 
   return (
     <div className="home-wrapper">
-      <h1>Home</h1>
+      <form>
+        <input type="text" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 };
