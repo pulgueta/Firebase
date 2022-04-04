@@ -1,16 +1,17 @@
 import React from "react";
 
 const Create = () => {
-  const handleSubmit = async (e) => {
+  const createPost = async (e) => {
     e.preventDefault();
   };
 
   return (
     <div className="wrapper create">
       <form>
-        <input type="text" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button type="submit" onClick={handleSubmit}>
+        <input type="text" placeholder="Title" />
+        <input type="text" placeholder="Author" />
+        <textarea placeholder="Description" />
+        <button type="submit" onClick={createPost}>
           Submit
         </button>
       </form>
