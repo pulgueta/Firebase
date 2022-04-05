@@ -23,7 +23,8 @@ const Home = () => {
           <br />
           <p>
             Inspired and based on various youtubers and tutorials, such as
-            FaztCode and PedroTech. There are many other things that I will implement, such as Authentication.
+            FaztCode and PedroTech. There are many other things that I will
+            implement, such as Authentication.
           </p>
         </div>
       </div>
