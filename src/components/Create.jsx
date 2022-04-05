@@ -27,24 +27,34 @@ const Create = () => {
 
   const createPost = (e) => {
     e.preventDefault();
-    addDoc(collectionRef, {
-      title: data.title,
-      author: data.author,
-      descBody: data.body,
-      createdAt: new Date(),
-    })
-      .then(() => {
-        toast.success("Post created!");
-      })
-      .catch(() => {
-        toast.error("Whoops! Something went wrong!");
-      });
+    if (
+      data.title.length === 0 ||
+      data.author.length === 0 ||
+      data.body.length === 0
+    ) {
+      toast.error("Whoops! You need to fill out all fields!");
 
-    setData({
-      title: "",
-      author: "",
-      body: "",
-    });
+      return false;
+    } else {
+      addDoc(collectionRef, {
+        title: data.title,
+        author: data.author,
+        descBody: data.body,
+        createdAt: new Date(),
+      })
+        .then(() => {
+          toast.success("Post created!");
+        })
+        .catch(() => {
+          toast.error("Whoops! Something went wrong!");
+        });
+
+      setData({
+        title: "",
+        author: "",
+        body: "",
+      });
+    }
   };
 
   return (
