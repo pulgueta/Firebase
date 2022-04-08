@@ -26,8 +26,8 @@ const Posts = () => {
 
   const deletePost = async (id) => {
     await deleteDoc(doc(db, "posts", id))
-      .then(toast.success("Post deleted!"))
-      .catch(toast.error("Whoops! Something went wrong!"));
+      .then(() => toast.success("Post deleted!"))
+      .catch(() => toast.error("Error deleting post!"));
   };
   return (
     <div className="wrapper posts">
